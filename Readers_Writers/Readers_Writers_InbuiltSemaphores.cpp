@@ -11,11 +11,10 @@ int maxWrites = 20;
 void *reader(void *number){
 	int reads = 0;
 	while(reads<maxReads){
-		// printf("Previous mutex Value %d",mutex);
-		
+				
 		usleep(2);
 		sem_wait(&mutex);
-		// printf("Reader has got the mutex %d",mutex);
+		
 		readerCount++;
 
 		if(readerCount==1){ 
@@ -23,11 +22,11 @@ void *reader(void *number){
 		}
 
 		sem_post(&mutex);
-		// printf("Reader has returned the mutex %d",mutex);
+		
 		printf("Reader %s is reading\n", (char *)number);
 		usleep(3);
 		sem_wait(&mutex);
-		// printf("Reader %s has completed reading",number);
+		
 		readerCount--;
 
 		if(readerCount==0){
@@ -39,7 +38,7 @@ void *reader(void *number){
 }
 
 void *writer(void *number){
-	// printf("Writer is Waiting n");
+
 	int writes = 0;
 	while(writes<maxWrites){
 		
@@ -49,7 +48,7 @@ void *writer(void *number){
 		usleep(2);
 		writes++;
 	}
-	//sleep(2);1
+	
 }
 
 int main(){
