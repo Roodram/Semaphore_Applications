@@ -8,8 +8,6 @@ using namespace std;
 
 #define MAX_QUEUE_LEN 10
 
-int waitingSmokers=0;
-
 semaphore matchSmoker, paperSmoker, tobaccoSmoker, agent;
 pthread_mutex_t mutex;
 
