@@ -6,7 +6,7 @@ I have implemented the semaphores in a header file "semaphore2.h" and included a
 
 To run a custom_semaphores based implementation make sure that the "semaphore2.h" file is in the same folder as the .cpp file.
   
-### Inbuilt Semaphores
+### Inbuilt_Semaphores
 These implementations use the inbuilt c++ library "semaphore.h" in the corresponding .cpp files.
 
 ### How to Run
